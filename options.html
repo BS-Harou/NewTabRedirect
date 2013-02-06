@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>New Tab Redirect Options</title>
+	<script>
+	var d = document;
+	var p = widget.preferences;
+
+
+	d.addEventListener('DOMContentLoaded', init);
+
+	function init() {
+		d.querySelector('input').value = p.url || '';
+
+		d.querySelector('input').addEventListener('input', function(e) {
+			p.url = this.value;
+		});	
+	}
+	</script>
+</head>
+<body>
+	Set URL: <input type="url" size="30">
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>New Tab Redirect BG</title>
+	<script>
+	var p = widget.preferences;
+
+	opera.extension.tabs.addEventListener('create', function(e) {
+		if (p.url) {
+			e.tab.update({ url: p.url });	
+		}
+	});
+	</script>
+</head>
+<body>
+
+</body>
+</html>
