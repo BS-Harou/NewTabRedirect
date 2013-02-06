@@ -7,7 +7,7 @@
 	var p = widget.preferences;
 
 	opera.extension.tabs.addEventListener('create', function(e) {
-		if (p.url) {
+		if (p.url && !e.tab.url) {
 			e.tab.update({ url: p.url });	
 		}
 	});
